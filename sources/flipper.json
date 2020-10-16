@@ -1,87 +1,104 @@
 {
-  "contract": {
-    "authors": [
-      "unknown"
+  "registry": {
+    "strings": [
+      "storage",
+      "value",
+      "bool",
+      "Storage",
+      "new",
+      "initvalue",
+      "flip",
+      "get",
+      "flipper"
     ],
-    "name": "flipper",
-    "version": "0.0.1"
-  },
-  "metadataVersion": "0.1.0",
-  "source": {
-    "compiler": "solang 0.1.4",
-    "hash": "0x0c195c353b657ba22caff07bc15d73e62dfbde951c019690e26980549b5d1010",
-    "language": "Solidity 0.1.4"
-  },
-  "spec": {
-    "constructors": [
+    "types": [
       {
-        "args": [
-          {
-            "name": "initvalue",
-            "type": {
-              "display_name": [
-                "bool"
-              ],
-              "type": 1
-            }
-          }
-        ],
-        "docs": [
-          "Constructor that initializes the `bool` value to the given `init_value`.\n\n"
-        ],
-        "name": "new",
-        "selector": "0xf81e7e1a"
-      }
-    ],
-    "events": [],
-    "messages": [
-      {
-        "args": [],
-        "docs": [
-          "A message that can be called on instantiated contracts. This one flips the value of the stored `bool` from `true` to `false` and vice versa.\n\n"
-        ],
-        "mutates": true,
-        "name": "flip",
-        "return_type": null,
-        "selector": "0xcde4efa9"
+        "id": {
+          "custom.name": 1,
+          "custom.namespace": [],
+          "custom.params": []
+        },
+        "def": {
+          "struct.fields": []
+        }
       },
       {
-        "args": [],
-        "docs": [
-          "Simply returns the current value of our `bool`.\n\n"
-        ],
-        "mutates": false,
-        "name": "get",
-        "return_type": {
-          "display_name": [
-            "bool"
-          ],
-          "type": 1
-        },
-        "selector": "0x6d4ce63c"
+        "id": "bool",
+        "def": "builtin"
       }
     ]
   },
   "storage": {
-    "struct": {
-      "fields": [
-        {
-          "layout": {
-            "cell": {
-              "key": "0x0000000000000000000000000000000000000000000000000000000000000000",
-              "ty": 1
+    "struct.type": 1,
+    "struct.fields": [
+      {
+        "name": 4,
+        "layout": {
+          "struct.type": 1,
+          "struct.fields": [
+            {
+              "name": 2,
+              "layout": {
+                "range.offset": "0x0000000000000000000000000000000000000000000000000000000000000000",
+                "range.len": "1",
+                "range.elem_type": 2
+              }
             }
-          },
-          "name": "value"
+          ]
         }
-      ]
-    }
-  },
-  "types": [
-    {
-      "def": {
-        "primitive": "bool"
       }
-    }
-  ]
+    ]
+  },
+  "contract": {
+    "name": 9,
+    "constructors": [
+      {
+        "name": 5,
+        "selector": "[\"0xF8\",\"0x1E\",\"0x7E\",\"0x1A\"]",
+        "docs": [
+          "Constructor that initializes the `bool` value to the given `init_value`."
+        ],
+        "args": [
+          {
+            "name": 6,
+            "type": {
+              "ty": 2,
+              "display_name": [
+                3
+              ]
+            }
+          }
+        ]
+      }
+    ],
+    "messages": [
+      {
+        "name": 7,
+        "selector": "[\"0xCD\",\"0xE4\",\"0xEF\",\"0xA9\"]",
+        "docs": [
+          "A message that can be called on instantiated contracts.",
+          "This one flips the value of the stored `bool` from `true`",
+          "to `false` and vice versa."
+        ],
+        "mutates": true,
+        "args": [],
+        "return_type": null
+      },
+      {
+        "name": 8,
+        "selector": "[\"0x6D\",\"0x4C\",\"0xE6\",\"0x3C\"]",
+        "docs": [
+          "Simply returns the current value of our `bool`."
+        ],
+        "mutates": false,
+        "args": [],
+        "return_type": {
+          "ty": 2,
+          "display_name": [
+            3
+          ]
+        }
+      }
+    ]
+  }
 }
